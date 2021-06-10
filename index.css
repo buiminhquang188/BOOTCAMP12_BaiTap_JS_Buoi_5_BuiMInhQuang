@@ -1,0 +1,10 @@
+body {
+  width: 90%;
+  margin: 0 auto!important;
+}
+p {
+  font-size: 25px;
+}
+input {
+  margin: 20px 0;
+}

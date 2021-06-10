@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Bài 1:</h1>
+    <h2>Sơ đồ 3 khối</h2>
+    <p>Bước 1: Input</p>
+    <ul>
+      <li>Khu Vực, Đối tượng, điểm Toán, điểm Lý, điểm Hoá</li>
+    </ul>
+    <p>Bước 2: Handle</p>
+    <ul>
+      <li>
+        Tạo hàm getEle với tham số truyền vào là id và giá trị trả về là
+        document.getElementById(id)
+      </li>
+      <li>Tạo các biến rdKhuVucA, rdKhuVucB, rdKhuVucC, rdKhuVucX</li>
+      <li>rdDoiTuong1, rdDoiTuong2, rdDoiTuong3, rdDoiTuong0</li>
+      <li>nhapDiemToan, nhapDiemLy, nhapDiemHoa, nhapDiemChuan</li>
+      <li>Tạo biến getEle để hứng giá trị trả về từ hàm là ID</li>
+      <li>
+        Tạo biến tính điểm thí sinh để hứng giá trị trả về tongDiem với giá trị
+        truyền vào là điểm Toán, diểm Lý, điểm Hoá
+      </li>
+      <li>
+        Tạo biến tính điểm khu vực để hứng giá trị trả về của điểm khu vực.
+        Trong hàm thì kiểm tra từng radio khu vực nếu người dùng chọn thì trả về
+        điểm tương ứng
+      </li>
+      <li>
+        Tạo biến tính điểm đối tượng tương tự như trên nhưng kiểm tra radio của
+        đối tượng
+      </li>
+      <li>
+        Tạo biến tính tổng điểm để hứng giá trị của hàm với tham số truyền vào
+        là tổng điểm, điểm khu vực, điểm đối tượng, bên trong hàm là tổng cộng
+        lại
+      </li>
+      <li>
+        Tạo biến tính kết quả để hứng giá trị trả về của hàm với giá trị truyền
+        vào là điểm chuẩn và tất cả điểm, bên trong so sánh tất cả điểm với nhập
+        điểm chuẩn, nếu tất cả điểm lớn hơn thì đậu, ngược lại thì rớt
+      </li>
+      <li>
+        Bắt sự kiện button, DOM tới các giá trị cần lấy, gọi hàm, truyền tham số
+        vào, validate
+      </li>
+    </ul>
+    <p>Bước 3: Output</p>
+    <ul>
+      <li>Xuất điểm của thí sinh và kết quả đậu hay rớt.</li>
+    </ul>
+    <form>
+      <label for="" style="display: block; font-size: 20px; font-weight: 500"
+        >Chọn khu vực</label
+      >
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectKhuVuc"
+            id="rdKhuVucA"
+          />Khu vực A
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectKhuVuc"
+            id="rdKhuVucB"
+          />Khu vực B
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectKhuVuc"
+            id="rdKhuVucC"
+          />Khu vực C
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectKhuVuc"
+            id="rdKhuVucX"
+          />Khu vực X
+        </label>
+      </div>
+      <br />
+      <label for="" style="display: block; font-size: 20px; font-weight: 500"
+        >Chọn đối tượng</label
+      >
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectDoiTuong"
+            id="rdDoiTuong1"
+          />Đối tượng 1
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectDoiTuong"
+            id="rdDoiTuong2"
+          />Đối tượng 2
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectDoiTuong"
+            id="rdDoiTuong3"
+          />Đối tượng 3
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="selectDoiTuong"
+            id="rdDoiTuong0"
+          />Đối tượng 0
+        </label>
+      </div>
+      <br />
+      <br />
+      <div class="form-group">
+        <label for="">Nhập điểm chuẩn của hội đồng</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập điểm chuẩn của hội đồng"
+          id="nhapDiemChuan"
+        />
+        <label for="">Nhập điểm môn Toán</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập điểm Toán"
+          id="nhapDiemToan"
+        />
+        <label for="">Nhập điểm môn Lý</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập điểm Lý"
+          id="nhapDiemLy"
+        />
+        <label for="">Nhập điểm môn Hoá</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập điểm môn Hoá"
+          id="nhapDiemHoa"
+        />
+      </div>
+      <input
+        name=""
+        id="btnBai1"
+        class="btn btn-primary"
+        type="button"
+        value="Tính"
+      />
+      <p id="ketQuaDiemThiSinh"></p>
+      <p id="ketQuaDauRotThiSinh"></p>
+    </form>
+
+    <!-- BÀI 2 -->
+    <h1>Bài 2</h1>
+    <h2>Sơ đồ 3 khối</h2>
+    <p>Bước 1: Input</p>
+    <ul>
+      <li>Tên, số Kw</li>
+    </ul>
+    <p>Bước 2: Handle</p>
+    <ul>
+      <li>DOM tới hai input để lấy giá trị</li>
+      <li>
+        Validate Họ tên và nhập kw, họ tên không được trống và không được là số,
+        còn nhập kw không được để trống và không được là số âm và không được
+        nhập số thập phân
+      </li>
+      <li>
+        Tạo hàm tên tính tiền điện với tham số truyền vào là nhập Kw, tạo biến
+        tiền Điện để hứng giá trị trả về của hàm đó.
+      </li>
+      <li>Nếu nhập kw lớn hơn 0 và bé hơn hoặc bằng 50 thì lấy số Kw * 500</li>
+      <li>
+        Nếu kw lớn hơn 50 và bé hơn hoặc bằng 100 thì lấy 25000 + (nhập kw -
+        100) và nhân với 850, vì khi đi qua 50kw đầu (0-50) và tới 50kw sau là
+        (50-100) thì phải công thêm 25000 và trừ đi 50 để loại bỏ 50kw đầu đi vì
+        đã cộng trong 25000 rồi
+      </li>
+      <li>Các trường hợp dưới tương tự</li>
+    </ul>
+    <p>Bước 3: Output</p>
+    <ul>
+      <li>In tên và tổng tiền điện</li>
+    </ul>
+    <form>
+      <div class="form-group">
+        <label for="">Nhập tên</label>
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Nhập tên"
+          id="nhapHoTen"
+        />
+        <label for="">Nhập số kW</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập số kW"
+          id="nhapKw"
+        />
+      </div>
+      <input
+        name=""
+        id="btnBai2"
+        class="btn btn-primary"
+        type="button"
+        value="Tính"
+      />
+      <p id="ketQuaBai2"></p>
+    </form>
+    <!-- Optional JavaScript -->
+    <!-- MAIN JS  -->
+    <script src="index.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

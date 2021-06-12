@@ -19,7 +19,7 @@ var tinhDiemThiSinh = function (nhapDiemToan, nhapDiemLy, nhapDiemHoa) {
 }
 
 var tinhDiemKhuVuc = function () {
-    var diemKhuVuc = 0;
+    var diemKhuVuc;
     if (rdKhuVucA.checked) {
         diemKhuVuc = 2;
     }
@@ -32,14 +32,11 @@ var tinhDiemKhuVuc = function () {
     else if (rdKhuVucX.checked) {
         diemKhuVuc = 0;
     }
-    else {
-        alert('Bạn phải tích vào một Khu Vực');
-    }
-    return diemKhuVuc
+    return diemKhuVuc;
 }
 
 var tinhDiemDoiTuong = function () {
-    var diemDoiTuong = 0;
+    var diemDoiTuong;
     if (rdDoiTuong1.checked) {
         diemDoiTuong = 2.5;
     }
@@ -51,9 +48,6 @@ var tinhDiemDoiTuong = function () {
     }
     else if (rdDoiTuong0.checked) {
         diemDoiTuong = 0;
-    }
-    else {
-        alert('Bạn phải tích vào một ô đối tượng');
     }
     return diemDoiTuong;
 }
@@ -87,13 +81,21 @@ var xuatKetQua = function () {
         alert('Bạn không được nhập số âm');
     }
     else {
+        debugger
         var diemKhuVuc = tinhDiemKhuVuc();
         var diemDoiTuong = tinhDiemDoiTuong();
-        var tongDiem = tinhDiemThiSinh(nhapDiemToan, nhapDiemLy, nhapDiemHoa);
-        var tatCaDiem = tinhTongDiem(tongDiem, diemKhuVuc, diemDoiTuong);
-        var ketQuaDauRot = tinhKetQua(nhapDiemChuan, tatCaDiem);
-        ketQuaDauRotThiSinh.innerHTML = 'Thí sinh đã: ' + ketQuaDauRot;
-        ketQuaDiemThiSinh.innerHTML = 'Tổng điểm của thí sinh là: ' + tatCaDiem;
+        if (isNaN(diemKhuVuc) || isNaN(diemDoiTuong)) {
+            alert('Bạn phải tích vào cả 2 ô điểm khu vực và điểm đối tượng');
+        }
+        else {
+            var tongDiem = tinhDiemThiSinh(nhapDiemToan, nhapDiemLy, nhapDiemHoa);
+            var tatCaDiem = tinhTongDiem(tongDiem, diemKhuVuc, diemDoiTuong);
+            var ketQuaDauRot = tinhKetQua(nhapDiemChuan, tatCaDiem);
+            ketQuaDauRotThiSinh.innerHTML = 'Thí sinh đã: ' + ketQuaDauRot;
+            ketQuaDiemThiSinh.innerHTML = 'Tổng điểm của thí sinh là: ' + tatCaDiem;
+        }
+        console.log(diemKhuVuc);
+        console.log(diemDoiTuong);
     }
 }
 document.getElementById('btnBai1').addEventListener('click', xuatKetQua);

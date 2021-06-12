@@ -81,7 +81,7 @@ var xuatKetQua = function () {
     var ketQuaDiemThiSinh = getEle('ketQuaDiemThiSinh');
     var ketQuaDauRotThiSinh = getEle('ketQuaDauRotThiSinh');
     if (isNaN(nhapDiemChuan) || isNaN(nhapDiemToan) || isNaN(nhapDiemLy) || isNaN(nhapDiemHoa)) {
-        alert('Bạn phải nhập đủ điểm của 3 môn');
+        alert('Bạn phải nhập đủ điểm của 3 môn và điểm hội đồng');
     }
     else if (nhapDiemChuan < 0 || nhapDiemToan < 0 || nhapDiemLy < 0 || nhapDiemHoa < 0) {
         alert('Bạn không được nhập số âm');

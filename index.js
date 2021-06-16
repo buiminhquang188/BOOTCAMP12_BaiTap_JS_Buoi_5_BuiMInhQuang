@@ -123,7 +123,6 @@ var tinhTienDien = function (nhapKw) {
 }
 
 var hoaDon = function () {
-    debugger
     var nhapHoTen = getEle('nhapHoTen').value;
     var nhapKw = getEle('nhapKw').valueAsNumber;
     ketQuaBai2 = getEle('ketQuaBai2');

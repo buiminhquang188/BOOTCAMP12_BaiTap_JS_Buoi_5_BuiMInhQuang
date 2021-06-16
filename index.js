@@ -127,10 +127,7 @@ var hoaDon = function () {
     var nhapHoTen = getEle('nhapHoTen').value;
     var nhapKw = getEle('nhapKw').valueAsNumber;
     ketQuaBai2 = getEle('ketQuaBai2');
-    if (nhapHoTen == '' || typeof nhapHoTen === 'number' || isNaN(nhapKw) || parseFloat(nhapKw)) {
-        alert('Bạn phải đúng tên và số kW tiêu thụ');
-    }
-    else if (nhapKw < 0) {
+    if (nhapKw < 0) {
         alert('Bạn phải nhập số kW > 0');
     }
     else {
